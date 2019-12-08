@@ -1,0 +1,110 @@
+{
+    "scripts": {
+        "test": "jest",
+        "build": "NODE_ENV=production webpack",
+        "dev": "webpack",
+        "watch": "npm run dev -- --watch",
+        "sculpin-watch": "./vendor/bin/sculpin generate --watch",
+        "phpunit": "./vendor/bin/phpunit",
+        "flow": "flow",
+        "webpack-defaults": "webpack-defaults",
+        "eslint": "node_modules/.bin/eslint"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+        "animate.css": "^3.7.0",
+        "animsition": "^4.0.2",
+        "axios": "^0.18.0",
+        "bootstrap": "^4.3.1",
+        "bootstrap-sass": "^3.4.1",
+        "browser-sync": "^2.26.3",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "core-js": "^3.0.1",
+        "feather-icons": "^4.21.0",
+        "font-awesome": "^4.7.0",
+        "formik": "^1.5.8",
+        "jquery": "^3.3.1",
+        "jquery-slimscroll": "^1.3.8",
+        "jquery-ui": "^1.12.1",
+        "jquery-validation": "^1.19.1",
+        "moment": "^2.22.2",
+        "moment-timezone": "^0.5.26",
+        "numeral": "^2.0.6",
+        "owl.carousel": "^2.3.4",
+        "perfect-scrollbar": "^1.4.0",
+        "picturefill": "^3.0.3",
+        "popper.js": "^1.15.0",
+        "postcss-nested": "^4.1.2",
+        "react": "^16.9.0",
+        "react-ckeditor-component": "^1.1.0",
+        "react-dates": "^20.3.0",
+        "react-dom": "^16.9.0",
+        "react-toastify": "^5.3.2",
+        "reactstrap": "^8.0.1",
+        "sanitize-html": "^1.20.0",
+        "select2": "^4.0.5",
+        "sweetalert": "^2.1.2",
+        "toastr": "^2.1.4",
+        "uuid": "^3.3.2",
+        "video.js": "^7.6.0",
+        "yup": "^0.27.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.2.1",
+        "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-flow": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.4",
+        "babel-plugin-import": "^1.12.0",
+        "css-loader": "^3.2.0",
+        "cssnano": "^4.1.5",
+        "eslint": "^6.0.1",
+        "export-loader": "^1.0.52",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "file-loader": "^1.1.6",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.7.2",
+        "postcss-import": "^12.0.0",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "^6.1.2",
+        "sass-loader": "^6.0.6",
+        "source-map-loader": "^0.2.4",
+        "style-loader": "^0.20.1",
+        "sugarss": "^2.0.0",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.6",
+        "webpack-dev-server": "^3.3.1"
+    },
+    "jest": {
+        "setupFilesAfterEnv": [
+            "jest-enzyme"
+        ],
+        "testEnvironment": "enzyme",
+        "testEnvironmentOptions": {
+            "enzymeAdapter": "react16"
+        },
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx"
+        ],
+        "moduleDirectories": [
+            "node_modules"
+        ],
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+            "\\.(css|scss|less|sass)$": "<rootDir>/__mocks__/styleMock.js"
+        }
+    },
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "IE 11"
+    ]
+}

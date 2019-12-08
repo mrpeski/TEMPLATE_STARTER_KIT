@@ -1,0 +1,77 @@
+.sidebar {
+    &--wrapper {
+        width: 300px;
+        float: left;
+        display: block;
+        height: 100vh;
+        overflow-y: auto;
+        display: none;
+    }
+    position:fixed;
+    z-index:2000;
+    min-width: 250px;
+    float: left;
+    will-change: left;
+    background: $blue-700;
+    color: $blue-500;
+    min-height: 100vh;
+    & .nav-link {
+        color: $gray-700;
+        font-weight: 400;
+        font-size: map-get($font-sizes, 14);
+        background: transparent;
+        padding: 0.8em 6px 0.8em 2em;
+        transition: background-color 0.75s;
+    }
+    & .nav-link:hover {
+        color: $gray-800;
+        background: $gray-200;
+    }
+    & .dropdown-menu {
+        background: $blue-600;
+        border: none;
+        left: -4px !important;
+    }
+    & .ico {
+        color: $gray-500;
+    }
+
+    & .dropdown.open {
+        & > [data-one-admin-toggle="collapse"] > .right--arrow {
+            transform: rotate(90deg)
+        }
+    }
+    & .right--arrow {
+        float: right;
+        margin-right: 14px;
+        transition: all 0.4s;
+        & > .ico {
+            width: 12px
+        }
+    }
+}
+        .ico {
+            stroke-width: 1px; width: 20px
+        }
+.slideDown {
+    animation-name: slideDown;
+    animation-duration: 1200ms;
+    // animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.navbar-nav .nav-link {
+    color: $blue;
+}
+
+
+@include media-breakpoint-up(md) {
+    .sidebar {
+        &--wrapper {
+            display: block;
+        }
+    }
+    .sub-menu {
+        left: 300px;
+    }
+}

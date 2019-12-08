@@ -1,0 +1,382 @@
+footer  {
+   background: #333;
+    color: white;
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.statusWrap {
+    display: none;
+}
+.top-wrap {
+    padding: 20px 10px;
+    display:flex;
+    flex-direction: column;
+    background:$purple-100;
+    min-height:100vh
+}
+.hide-xs {
+    display: none;
+}
+
+.hide-sm {
+    display: none;
+}
+
+
+
+@include media-breakpoint-up(lg) {
+    .hide-sm {
+        display: block;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .hide-xs {
+        display: block;
+    }
+}
+
+.show-xs {
+    display: block;
+}
+
+@include media-breakpoint-up(md) {
+    .show-xs {
+        display: none;
+    }
+}
+
+
+@include media-breakpoint-up(md) {
+    .top-wrap {
+        padding: 30px;
+    }
+}
+@include media-breakpoint-up(md) {
+    .statusWrap {
+        display: block;
+    }
+}
+
+
+.main-wrap {
+    background:$purple-100;
+    width:100%;
+    padding: 40px 10px ;
+}
+
+@include media-breakpoint-up(md) {
+    .main-wrap {
+        padding:50px
+    }
+}
+
+
+.searchForm{
+    position: relative;
+    & > .form-control {
+        border-radius: 40px;
+        display: none;
+    }
+    & > .form-control:focus {
+        animation-name: stretch;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        // animation-direction: alternate;
+    }
+
+    & > .btn {
+        right: map-get($spacers, 2);
+        background: none;
+        border: none;
+        padding: 0
+    }
+.searchForm .form-control:hover
+    {
+        border-color: $primary
+    }
+}
+@include media-breakpoint-up(md) {
+    .searchForm {
+        width: 500px;
+        padding-left: map-get($map: $spacers, $key: 2);
+        & > .form-control {
+            width: auto;
+            display: block;
+            padding-left: map-get($map: $spacers, $key: 2)
+        }
+        & > .btn {
+            position: absolute;
+        }
+    }
+}
+
+.box {
+    width: 100%;
+    margin: 10px 0;
+    background-color: $pink-200;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    &--200 {
+        height: 200px;
+    }
+    &--500 {
+        height: 500px;
+    }
+    &--1000 {
+        height: 1000px;
+    }
+}
+
+.icon--box {
+    height: 60px;padding: 10px
+}
+
+.notification {
+    &.success::before {
+        width: 4px;
+        height: 4px;
+        background: green;
+        content: "";
+        display: block;
+
+    }
+}
+
+.icon {
+    display:block; width:60px
+}
+
+.overlay {
+    position: static;
+    width: 100%;
+    height: 100%;
+    background: $gray-800;
+    opacity: 0.8;
+    z-index: $zindex-modal;
+    &.open {
+        position: fixed
+    }
+
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    &.show {
+        visibility:visible;
+    }
+}
+
+.owl-carousel {
+    position: relative;
+    .owl-nav button.owl-prev {
+        background: url("./images/prev.svg") !important;
+        display: none;
+        width: 60px;
+        height: 60px;
+        text-indent: -999999px;
+        left: 0;
+        top: 35%;
+        position: absolute;
+    }
+    .owl-nav button.owl-next {
+        background: url("./images/next.svg") !important;
+        display: none;
+        width: 60px;
+        height: 60px;
+        text-indent: -999999px;
+        right: 0;
+        top: 35%;
+        position: absolute;
+    }
+}
+
+@include media-breakpoint-up(md){
+    .owl-nav {
+        display: block;
+    }
+    .owl-nav button.owl-next, .owl-nav button.owl-prev {
+        display: block;
+    }
+}
+
+a {
+    color: $yellow;
+    &:hover{
+        color: $yellow;
+    }
+}
+
+.nav-footer a {
+    color: #B0B0B0;
+}
+
+.special-h > * {
+    display: inline-block;
+    margin: 0;
+    line-height: 1.2;
+    vertical-align: middle;
+}
+
+.special-h > .before {
+    width: 9px;
+    height: 34px;
+    background: hsl(43, 86%, 60%);
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.special-h > .after {
+    width: 145px;
+    height: 2px;
+    background: #C4C4C4;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.video-js .vjs-big-play-button {
+    font-size: 3em;
+    line-height: 1.5em;
+    height: 1.63332em;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: calc(50% - 0.7em) !important;
+    left: calc(50% - 1.5em) !important;
+    padding: 0;
+    cursor: pointer !important;
+    opacity: 1;
+    border: .06666em solid $yellow !important;
+    background-color: $yellow !important;
+    border-radius: .3em;
+    transition: all .4s;
+}
+
+.vjs-poster {
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: unset !important;
+    height: 100%;
+}
+
+@include media-breakpoint-up(md) {
+    .videoWrapper {
+        padding: 65px;
+    }
+}
+
+.vid.video-js {
+    color: $yellow;
+    max-width: 100%;
+}
+
+.video-js{
+    background-color: transparent !important;
+}
+/* Change the border of the big play button. */
+.vid .vjs-big-play-button {
+    border-color: $black;
+}
+.vid .vjs-icon-placeholder {
+    color: $black !important;
+    cursor: pointer;
+}
+/* Change the color of various "bars". */
+.vid .vjs-volume-level,
+.vid .vjs-play-progress,
+.vid .vjs-slider-bar {
+    background: $yellow;
+}
+
+.what-we-do-dimensions, .tech-driven-dimensions {
+    width: auto;
+    height: 330px;
+}
+
+.post-mini {
+    width: 100%; height: 100px; overflow: hidden;
+    & > img {
+        width: 100%
+    }
+
+}
+
+.post:hover img {
+    transform: scale(1.02);
+}
+
+.post a {
+    font-weight: 600;
+}
+
+.hero-copy {
+    @include media-breakpoint-down(md) {
+        background: rgba(255,255,255,0.82);
+        padding: 25px;
+        height:100vh;
+        width:100vw
+    }
+}
+.selfservice-bucket {
+    .selfservice-body {
+        padding: 80px;
+    }
+    .selfservice-body.l {
+        @include media-breakpoint-up(md) {
+            padding: 100px 80px;
+            right:0
+        }
+    }
+    .selfservice-body.r {
+        @include media-breakpoint-up(md) {
+            padding: 100px 80px;
+            left:0
+        }
+    }
+    img {
+        height:100%;
+
+        @include media-breakpoint-up(md) {
+            height: auto;
+        }
+    }
+}
+
+.uptrdx {
+    padding: 0 7rem;
+    margin-top: 40px;
+    position: relative;
+    z-index: 50;
+}
+
+.uptrdx {
+    @include media-breakpoint-down(md) {
+        padding: 0 1rem !important;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .contrib {
+        background: none;
+    }
+}

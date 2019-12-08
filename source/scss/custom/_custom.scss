@@ -1,0 +1,146 @@
+.features {
+    .custom-control-label{
+        width: 100%
+    }
+}
+
+.special {
+    //background: url(./images/bg.jpg) center center no-repeat no-repeat;
+    background-size: cover;
+}
+
+.login {
+    &--form {
+        padding: 40px 16px
+    }
+}
+
+.front {
+    &--text {
+        padding-top: calc(50vh-300px);
+        padding-bottom: calc(50vh-300px);
+        color: white;
+        vertical-align: middle;
+        display: table-cell;
+    }
+}
+
+.social {
+    text-indent: -9999px;
+    text-align: initial;
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    background: center center no-repeat;
+    display: inline-block;
+    outline: none;
+    background-size: contain;
+}
+
+.social.sm {
+    width: 1em;
+    height: 1em;
+}
+
+.social.instagram {
+    background-image: url(./images/social/mono/in.svg);
+}
+.social.facebook {
+    background-image: url(./images/social/mono/fb.svg);
+}
+.social.linkedin {
+    background-image: url(./images/social/mono/li.svg);
+}
+.social.twitter {
+    background-image: url(./images/social/mono/tw.svg);
+}
+
+.social.duo.instagram {
+    background-image: url(./images/social/duotone/duo-in.svg);
+}
+.social.duo.facebook {
+    background-image: url(./images/social/duotone/duo-fb.svg);
+}
+.social.duo.linkedin {
+    background-image: url(./images/social/duotone/duo-li.svg);
+}
+.social.duo.twitter {
+    background-image: url(./images/social/duotone/duo-tw.svg);
+}
+
+//.social.circle.instagram {
+//    background-image: url(./images/social/inverted_mono/inverted-in.svg);
+//}
+//.social.circle.facebook {
+//    background-image: url(./images/social/inverted_mono/inverted-fb.svg);
+//}
+.social.circle.linkedin {
+    background-image: url(./images/social/inverted_mono/inverted-li.svg);
+}
+.social.circle.twitter {
+    background-image: url(./images/social/inverted_mono/inverted-tw.svg);
+}
+
+
+h1,h2,h3,h4,h5 {
+    font-weight: 700;
+    color: black;
+}
+
+.footer-h {
+    font-size: 1em;font-weight:400;
+    margin: 10px 0;color:$yellow;
+    text-transform: uppercase;
+}
+
+.toTop {
+    display: none;
+    transition: all 2s;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    color: gray;
+    position: fixed;
+    cursor: pointer;
+    padding: 12px;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+
+}
+.toTop.show {
+    display: block;
+}
+
+.portrait{
+    height: 250px; width: 230px; overflow: hidden;
+    background: white;
+}
+
+.portrait-img {
+    transform: translate(-10%, -10%);
+}
+
+.accordion .btn {
+    font-weight: 700;
+}
+
+.accordion .btn-link:hover, .accordion .btn-link:focus{
+    text-decoration: none;
+}
+
+.accordion .btn-link:focus {
+    color: $link-hover-color
+}
+
+.accordion {
+    li {
+        margin-bottom: 20px
+    }
+    .card-body {
+        padding: 100px
+    }
+}
+
+

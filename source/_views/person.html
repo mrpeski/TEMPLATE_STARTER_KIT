@@ -1,0 +1,18 @@
+{% extends 'default' %}
+
+{% block content_wrapper %}
+<div class="p-6">
+    <img src="{{page.photo}}" class="img-fluid mb-2"/>
+    <h1 class="t-24 mb-2">{{ page.title }}</h1>
+    <p>{{ page.position }}</p>
+    <p style="display: inline-block;">
+        <span class="d-none">Social Media Handles</span>
+        <a href="{{page.twitter}}" target="_blank" class="p-1">
+            <span class="social twitter circle">Twitter</span>
+        </a>
+        <a href="{{page.linkedin}}" target="_blank" class="p-1">
+            <span class="social linkedin circle">LinkedIn</span>
+        </a>
+    </p>
+</div>
+{% endblock content_wrapper %}

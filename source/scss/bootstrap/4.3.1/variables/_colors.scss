@@ -1,0 +1,165 @@
+// Color system
+// Grays
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #626262 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #232323 !default;
+$black:    #000 !default;
+
+// $blue:    #ff76a7 !default;
+$indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+$red:     #ed1c24 !default;
+$orange:  #f7b733 !default;
+$yellow:  #F3BB28 !default;
+$green:   #026f3e !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+
+// Primary
+$blue: #0082e6 !default;
+$blue-700: #1a1d4d !default;
+$blue-600: #003a66 !default;
+$blue-500: #0065b2 !default;
+$blue-300: #66bcff !default;
+$blue-200: #cce9ff !default;
+$blue-100: #edf5f8 !default;
+
+$yellow:  #f1bf40 !default;
+$yellow-100: #fdf7e8 !default;
+
+// Accents
+$pink: #ff76a4 !default;
+$pink-700: #850016 !default;
+$pink-600: #d60024 !default;
+$pink-500: #ff4785 !default;
+$pink-300: #ff99bb !default;
+$pink-200: #ffccee !default;
+$pink-100: #fff5fc !default;
+
+$purple: #917fca !default;
+$purple-700: #481e48 !default;
+$purple-600: #3c2d6c !default;
+$purple-500: #644bb4 !default;
+$purple-300: #daa5d6 !default;
+$purple-200: #f0dbef !default;
+$purple-100: #f3f1f9 !default;
+
+
+$colors: (
+    "blue": $blue,
+    "blue-100": $blue-100,
+    "blue-200": $blue-200,
+    "blue-300": $blue-300,
+    "blue-500": $blue-500,
+    "blue-600": $blue-600,
+    "blue-700": $blue-700,
+        "green-100": #e2f0ea,
+    "pink": $pink,
+    "pink-100": $pink-100,
+    "pink-200": $pink-200,
+    "pink-300": $pink-300,
+    "pink-500": $pink-500,
+    "pink-600": $pink-600,
+    "pink-700": $pink-700,
+    "purple": $purple,
+    "purple-100": $purple-100,
+    "purple-200": $purple-200,
+    "purple-300": $purple-300,
+    "purple-500": $purple-500,
+    "purple-600": $purple-600,
+    "purple-700": $purple-700,
+    "yellow": $yellow,
+    "yellow-100": $yellow-100,
+) !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $pink !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: (
+    $light:  $gray-200,
+) !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900 !default;
+$yiq-text-light:            $white !default;
+
+@mixin text-color-variant($parent, $color) {
+    #{$parent} {
+      color: $color !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+@include text-color-variant(".text-color-#{$color}", $value);
+}

@@ -1,0 +1,139 @@
+@keyframes reveal {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+@keyframes slideTopIn {
+    from {
+        transform: translateY(-200%);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+@keyframes rotate {
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-(attr('data-h')));
+        opacity: 0;
+        display: none
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        display: flex;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 118, 166, 0.836);
+        box-shadow: 0 0 0 0 rgba(255, 118, 166, 0.829);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255,118,167, 0);
+        box-shadow: 0 0 0 10px rgba(255,118,167, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255,118,167, 0);
+        box-shadow: 0 0 0 0 rgba(255,118,167, 0);
+    }
+}
+
+@keyframes revealUp {
+    from {
+        opacity: 0%;
+        transform: translateY(50%)
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0)
+    }
+}
+
+@keyframes destroyDown {
+    from {
+        opacity: 100%;
+        // display:block;
+        transform: translateY(0)
+    }
+    to {
+        opacity: 0%;
+        // display:none;
+        z-index: -45;
+        transform: translateY(50%)
+    }
+}
+
+@keyframes stretch {
+    from {
+        width: 100%
+    }
+    to {
+        width: calc(100% + 100px)
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-10px)
+    }
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes zoom {
+    to {
+        transform: scale(1)
+    }
+    66% {
+        transform: scale(1)
+    }
+    from {
+        transform: scale(1.1)
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+    // border-radius: 12px;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+.navbar {
+    animation-name: slideTopIn;
+    animation-delay: 1.2s;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation-fill-mode: backwards;
+}
+
+body {
+    animation-name: fadeIn;
+    animation-delay: 0.1s;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}

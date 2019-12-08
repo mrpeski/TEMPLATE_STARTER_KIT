@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        // "noImplicitAny": true,
+        "removeComments": true,
+        "jsx": "react",
+        "lib": ["dom", "es2016"],
+        "strictFunctionTypes": false,
+    },
+    "awesomeTypescriptLoaderOptions": {
+        /* ... */
+    },
+    "useBabel": true,
+    "exclude": [
+        "node_modules",
+        "webpack",
+    ]
+}
+

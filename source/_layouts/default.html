@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block head_meta %}
+            <meta name="robots" content="noindex, follow">
+        {% endblock %}
+        <link rel="stylesheet" href="https://use.typekit.net/wvt4umv.css">
+        <link rel="stylesheet" href="https://use.typekit.net/uff1hva.css">
+        <link href="{{ site.url }}/dist/site.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,400i,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+        {% block head_styles %}
+        {% endblock %}
+        {% block head_scripts %}
+        {% endblock %}
+    </head>
+    <body class="bg-white">
+            {% include "navbar.html" %}
+            {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+            {% include "footer.html" %}
+        {% block scripts %}
+        {% endblock %}
+
+        {% if site.google_analytics_tracking_id %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{site.google_analytics_tracking_id}}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
+        {% block scripts_after %}
+        {% endblock %}
+        <script src="{{ site.url }}/dist/vendor.js"></script>
+        <script src="{{ site.url }}/dist/site.js"></script>
+    </body>
+</html>

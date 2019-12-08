@@ -1,0 +1,12 @@
+/.sculpin/
+/app/cache/*
+/app/config/sculpin_kernel_*.yml
+/app/config/sculpin_site_*.yml
+/app/logs/*
+/output_*/
+/output_dev/
+/node_modules/
+/source/build/
+s3.conf
+/vendor/
+/output_dev/
