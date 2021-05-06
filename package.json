@@ -43,7 +43,7 @@
         "react-dom": "^16.9.0",
         "react-toastify": "^5.3.2",
         "reactstrap": "^8.0.1",
-        "sanitize-html": "^1.20.0",
+        "sanitize-html": "^2.3.2",
         "select2": "^4.0.5",
         "sweetalert": "^2.1.2",
         "toastr": "^2.1.4",
